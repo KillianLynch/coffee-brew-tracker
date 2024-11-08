@@ -1,0 +1,226 @@
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+    color: #333;
+}
+
+body {
+    background-color: #f7f4f0;
+    font-size: 16px;
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+    background-color: #ffffff;
+    border: 2px solid #d1a07c;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    border-radius: 8px;
+    margin: 40px auto;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2em;
+    color: #5b3a2e;
+    margin-bottom: 30px;
+    font-weight: bold;
+    border-bottom: 2px solid #d1a07c;
+    padding-bottom: 10px;
+}
+
+/* Form Styles */
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    width: 205px;
+    text-align: left;
+    margin-right: 20px;
+    font-weight: bold;
+    color: #5b3a2e;
+    white-space: nowrap;
+}
+
+.form-group input,
+.form-group textarea {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #c8a17d;
+    border-radius: 4px;
+    font-size: 1em;
+    background-color: #fafafa;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #5b3a2e;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Button Styles */
+button {
+    background-color: #5b3a2e;
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 15px;
+    border: none;
+    border-radius: 4px;
+    width: 100%;
+    margin-top: 20px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: #4a2e21;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.secondary-button {
+    display: block;
+    background-color: #ffffff;
+    color: #5b3a2e;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    padding: 15px;
+    border: solid #5b3a2e;
+    border-radius: 4px;
+    width: 100%;
+    margin-top: 20px;
+    text-decoration: none;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    font-size: 13.3333px;
+}
+
+.secondary-button:hover {
+    background-color: #858585bc;
+}
+
+/* Brew List Container */
+#brewListContainer {
+    margin-top: 30px;
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+#brewListContainer::-webkit-scrollbar {
+    width: 6px;
+}
+
+#brewListContainer::-webkit-scrollbar-thumb {
+    background-color: #d1a07c;
+    border-radius: 3px;
+}
+
+/* Brew Card Styles */
+.brew-card {
+    background-color: #ffffff;
+    padding: 20px;
+    border: 1px solid #d1a07c;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.brew-title {
+    font-weight: bold;
+    color: #5b3a2e;
+    font-size: 1.6em;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.brew-subtitle {
+    font-size: 1.1em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.brew-rating,
+.brew-date {
+    font-size: 0.95em;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.secondary-info {
+    padding: 10px;
+}
+
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.info-row span {
+    width: 48%;
+}
+
+.main-info {
+    background-color: #f0eae5;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #e0dcd8;
+}
+
+.logged-date {
+    text-align: right;
+    margin-top: 15px;
+    font-size: 0.9em;
+    color: #666;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    .form-group {
+        flex-direction: column;
+        align-items: stretch;
+        margin-bottom: 20px;
+    }
+
+    .form-group label {
+        text-align: left;
+        width: 100%;
+        margin-bottom: 8px;
+    }
+
+    .brew-card {
+        padding: 15px;
+    }
+
+    .brew-title {
+        font-size: 1.2em;
+    }
+
+    .brew-subtitle,
+    .brew-rating,
+    .brew-date {
+        font-size: 0.9em;
+    }
+}
+

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags and title -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Brew Tracker</title>
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Coffee Brew Tracker</h1>
+        <form id="brewForm">
+            <div class="form-group">
+                <label for="brewMethod">Brew Method</label>
+                <input type="text" id="brewMethod" placeholder="e.g., Pour Over" required />
+            </div>
+            <div class="form-group">
+                <label for="beanOrigin">Bean Origin</label>
+                <input type="text" id="beanOrigin" placeholder="e.g., Ethiopia" required />
+            </div>
+            <div class="form-group">
+                <label for="grindSize">Grind Size</label>
+                <input type="text" id="grindSize" placeholder="e.g., Medium-Fine" required />
+            </div>
+            <div class="form-group">
+                <label for="temperature">Temperature (°C)</label>
+                <input type="number" id="temperature" placeholder="e.g., 92" required />
+            </div>
+            <div class="form-group">
+                <label for="brewTime">Brew Time (seconds)</label>
+                <input type="number" id="brewTime" placeholder="e.g., 180" required />
+            </div>
+            <div class="form-group">
+                <label for="rating">Rating (1-10)</label>
+                <input type="number" id="rating" placeholder="e.g., 8" required />
+            </div>
+            <div class="form-group">
+                <label for="notes">Notes</label>
+                <textarea id="notes" placeholder="Additional notes"></textarea>
+            </div>
+            <button type="submit">Log Brew</button>
+        </form>
+        <!-- New button to navigate to the brews page -->
+        <a href="brews.html" class="secondary-button">View Tracked Brews</a>
+    </div>
+
+    <!-- Link to external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
