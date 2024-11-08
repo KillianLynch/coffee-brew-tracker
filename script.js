@@ -28,12 +28,32 @@ async function logBrew(event) {
         notes: document.getElementById('notes').value,
         rating: parseInt(document.getElementById('rating').value)
     };
-    await fetch('http://localhost:3000/brews', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(brew)
-    });
-    fetchBrews();
+    try {
+        const response = await fetch('/brews', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(brew)
+        });
+        if (response.ok) {
+            // Clear the form
+            document.getElementById('brewForm').reset();
+
+            // Show the popup
+            const popup = document.getElementById('popup');
+            popup.style.display = 'block';
+
+            // Automatically hide the popup after 3 seconds
+            setTimeout(function() {
+                popup.style.display = 'none';
+            }, 3000);
+        } else {
+            // Handle non-OK responses
+            alert('Failed to log brew. Please try again.');
+        }
+    } catch (error) {
+        console.error('Error:', error);
+        alert('Error logging brew. Please try again.');
+    }
 }
 
 document.getElementById('brewForm').addEventListener('submit', logBrew);
